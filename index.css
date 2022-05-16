@@ -1,0 +1,27 @@
+.games{
+    display: flex;
+    background-color: #9C835F;
+    justify-content: space-around;
+    align-items: center;
+}
+.bgk{
+    margin-block: 12px;
+}
+.bgk:active{
+    background-color: #9C835F;
+    
+}
+.bgk:focus{
+    background-color:white;
+}
+.vs{
+   
+    font-size: 100px;
+    color:red;
+    font-family: Verdana;
+}
+
+.h1{
+    font-size: 100;
+}
+.container .games{}

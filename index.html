@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <style>
+        .body{
+    background-color: aqua;
+    width: 1000;
+    height: 1000;
+}
+    </style> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Rahel</title>
+</head>
+<body>
+    <div class="games">
+        <div class="player">
+            <div class="bgk"> <img width="150" height="150" src="./assets/batu.png"></div>
+            <div class="bgk"> <img width="150" height="150" src="./assets/kertas.png"></div>
+            <div class="bgk"> <img width="150" height="150" src="./assets/gunting.png"></div>
+            
+        </div>
+        <div class="vs">VS</div>
+        <div class="player">
+            <div class="bgk" id="batu_com"><img width="150" height="150" src="./assets/batu.png"></div>
+            <div class="bgk"> <img width="150" height="150" src="./assets/kertas.png"></div>
+            <div class="bgk"> <img width="150" height="150" src="./assets/gunting.png"></div>
+        
+        </div>
+        
+    </div>
+
+</body>
+<script>
+    // let selected = document.getElementById()
+    // box = document.getElementById('batu_com').onclick = function () {
+    // console.log('clicked')
+    // box.style.backgroundColor = 'coral';
+    class Player{
+        kind;
+        constructor(kind) {
+        this.kind = kind;
+        }
+    }
+    items=["gunting", "batu", "kertas"]
+    var item = items[Math.floor(Math.random()*items.length)];
+    console.log(item)
+
+    player = new Player()
+    player.kind = "batu"
+
+    com = new Player()
+    com.kind = item
+
+    console.log(winner(player, com))
+
+
+    function winner(player, com){
+        if (player.kind === com.kind)
+            return "draw"
+        if(player.kind ==="gunting" && com.kind ==="kertas")
+            return "win"
+        if(player.kind ==="kertas" && com.kind ==="batu")
+            return "win"
+        if(player.kind ==="batu" && com.kind ==="gunting")
+            return "win"
+        return "lose"
+    }
+    
+
+
+</script>
+</html>
+
